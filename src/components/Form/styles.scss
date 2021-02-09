@@ -3,16 +3,19 @@
 .form {
   display: flex;
   &__input {
-    flex: 1;
     padding: v.$gutter;
+    flex: 1;
     font-size: 1.5em;
     border: none;
+    border-radius: 20px 0 0 20px;
+    background-color: v.$color-input;
     &::placeholder {
-      opacity: 0.6;
+      opacity: .6;
     }
   }
   &__button {
-    width: 100px; 
     border: none;
+    width: 100px;
+    border-radius: 0 20px 20px 0;
   }
 }

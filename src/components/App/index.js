@@ -5,7 +5,7 @@ import React from 'react';
 import Form from 'src/components/Form';
 import Messages from 'src/components/Messages';
 // == Import
-import './style.scss';
+import './styles.scss';
 
 // == Composant
 const App = () => (
