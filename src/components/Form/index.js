@@ -7,9 +7,9 @@ import './styles.scss';
 
 // == Composant
 const Form = ({ inputValue, onChangeInputValue }) => {
-  const handleOnChange = () => {
+  const handleOnChange = (event) => {
     console.log('change');
-    onChangeInputValue();
+    onChangeInputValue(event.target.value);
   };
 
   return (

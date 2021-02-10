@@ -9,10 +9,9 @@ const mapStateToProps = (state) => ({
 
 // state write branch
 const mapDispatchToProps = (dispatch) => ({
-  onChangeInputValue: () => {
-    console.log('want to modify the input value');
-    const action = setInputValue();
-    console.log('action', action);
+  onChangeInputValue: (value) => {
+    const action = setInputValue(value);
+    dispatch(action);
   },
 });
 
