@@ -6,17 +6,17 @@ const initialState = {
     {
       id: 11,
       author: 'Super Chat',
-      content: 'lorem ipsum',
+      content: 'Hey salut',
     },
     {
       id: 22,
-      author: 'Super Chat',
-      content: 'lorem ipsum',
+      author: 'Super Miaou',
+      content: 'Comment tu vas ?',
     },
     {
       id: 3,
       author: 'Super Chat',
-      content: 'lorem ipsum',
+      content: 'Super !',
     },
   ],
   newMessage: '',
