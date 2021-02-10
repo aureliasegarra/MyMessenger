@@ -19,6 +19,7 @@
     box-shadow: -3px 7px 9px 0px rgb(213, 213, 213);
   }
   &__content {
+    animation: pop .5s cubic-bezier(0,0,.58,1);
     background-color: #fff;
     padding: v.$gutter;
     border-radius: 4px 20px 20px 20px;
@@ -27,5 +28,16 @@
     display: inline-block;
     min-width: 150px;
     margin-bottom: 2rem;
+  }
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
