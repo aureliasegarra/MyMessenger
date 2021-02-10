@@ -14,7 +14,7 @@ const Messages = ({ messages }) => (
         key={message.id}
         {...message}
       />
-    ))};
+    ))}
   </div>
 );
 
