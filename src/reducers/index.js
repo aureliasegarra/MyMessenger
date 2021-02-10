@@ -1,4 +1,4 @@
-import { SET_INPUT_VALUE } from 'src/actions';
+import { SET_INPUT_VALUE, ADD_MESSAGE } from 'src/actions';
 
 const initialState = {
   messages: [
@@ -28,6 +28,23 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         newMessage: action.value,
       };
+    case ADD_MESSAGE: {
+      // new object to put in the array of messages
+      const message = {
+        id: 4,
+        author: 'Vincent',
+        content: state.newMessage,
+      };
+      // creation of a new reference of the array
+      const messages = [
+        ...state.messages,
+        message,
+      ];
+      return {
+        ...state,
+        messages,
+      };
+    }
     default:
       return state;
   }

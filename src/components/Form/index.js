@@ -6,14 +6,20 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 // == Composant
-const Form = ({ inputValue, onChangeInputValue }) => {
+const Form = ({ inputValue, onChangeInputValue, onSubmitForm }) => {
   const handleOnChange = (event) => {
     console.log('change');
     onChangeInputValue(event.target.value);
   };
 
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    console.log(handleOnSubmit);
+    onSubmitForm();
+  };
+
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleOnSubmit}>
       <input
         type="text"
         placeholder="Saisissez votre message..."
@@ -34,6 +40,7 @@ const Form = ({ inputValue, onChangeInputValue }) => {
 Form.propTypes = {
   inputValue: PropTypes.string.isRequired,
   onChangeInputValue: PropTypes.func.isRequired,
+  onSubmitForm: PropTypes.func.isRequired,
 };
 
 // == Export
