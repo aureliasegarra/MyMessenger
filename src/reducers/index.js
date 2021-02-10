@@ -1,4 +1,5 @@
 import { SET_INPUT_VALUE, ADD_MESSAGE } from 'src/actions';
+import { getHighestId } from 'src/selectors';
 
 const initialState = {
   messages: [
@@ -31,7 +32,7 @@ const reducer = (state = initialState, action = {}) => {
     case ADD_MESSAGE: {
       // new object to put in the array of messages
       const message = {
-        id: 4,
+        id: getHighestId(state) + 1,
         author: 'Vincent',
         content: state.newMessage,
       };
