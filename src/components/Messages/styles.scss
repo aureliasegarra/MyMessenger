@@ -3,6 +3,7 @@
 .messages {
   padding: v.$gutter * 2;
   background-color: #fff;
+  overflow: auto;
 }
 
 .message {

@@ -8,13 +8,11 @@ import './styles.scss';
 // == Composant
 const Form = ({ inputValue, onChangeInputValue, onSubmitForm }) => {
   const handleOnChange = (event) => {
-    console.log('change');
     onChangeInputValue(event.target.value);
   };
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    console.log(handleOnSubmit);
     onSubmitForm();
   };
 
