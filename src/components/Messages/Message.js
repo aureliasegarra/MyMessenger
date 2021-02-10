@@ -1,16 +1,22 @@
 // == Import npm
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // == Import
 import './styles.scss';
 
 // == Composant
-const Message = () => (
+const Message = ({ author, content }) => (
   <div className="message">
-    <p className="message__author">Super chat</p>
-    <p className="message__content">Salut ca va ?</p>
+    <p className="message__author">{author}</p>
+    <p className="message__content">{content}</p>
   </div>
 );
+
+Message.propTypes = {
+  author: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+};
 
 // == Export
 export default Message;

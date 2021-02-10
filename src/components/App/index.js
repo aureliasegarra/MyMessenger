@@ -7,10 +7,28 @@ import Messages from 'src/components/Messages';
 // == Import
 import './styles.scss';
 
+const messages = [
+  {
+    id: 11,
+    author: 'Super Chat',
+    content: 'lorem ipsum',
+  },
+  {
+    id: 22,
+    author: 'Super Chat',
+    content: 'lorem ipsum',
+  },
+  {
+    id: 3,
+    author: 'Super Chat',
+    content: 'lorem ipsum',
+  },
+];
+
 // == Composant
 const App = () => (
   <div className="app">
-    <Messages />
+    <Messages messages={messages} />
     <Form />
   </div>
 );
