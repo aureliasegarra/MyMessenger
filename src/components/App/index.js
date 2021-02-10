@@ -2,7 +2,7 @@
 import React from 'react';
 
 // import Components
-import Form from 'src/components/Form';
+import Form from 'src/containers/Form';
 import Messages from 'src/containers/Messages';
 // == Import
 import './styles.scss';

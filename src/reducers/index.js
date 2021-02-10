@@ -16,6 +16,7 @@ const initialState = {
       content: 'lorem ipsum',
     },
   ],
+  newMessage: '',
 };
 
 const reducer = (state = initialState, action = {}) => {
