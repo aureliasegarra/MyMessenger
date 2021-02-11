@@ -10,11 +10,13 @@
 - Javascript / React / Hooks / Redux
 - Webpack / Babel
 - PropTypes
+- Axios / Middlewares
 
 ## Goals 
 - Discover React (web page usage)
 - Components architecture for scalable application
 - Discover Redux (store, reducer, action, containers, selectors)
+- Connection to server (websocket)
 - UI/UX 
 
 ## Status
