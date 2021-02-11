@@ -3,9 +3,19 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  background-image: url(../../Wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.title {
+  font-size: 7em;
+  font-family: 'Roboto', serif;
+  color: #161f43;
+  position: relative;
+  top: 80px;
+  left: 80px;
+}
 /* 
   // or you can import your own font
   @font-face {

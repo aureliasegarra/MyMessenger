@@ -1,0 +1,42 @@
+@use 'src/styles/vars' as v;
+
+.settings {
+  position: fixed;
+  padding: v.$gutter / 2;
+  top: 50px;
+  right: 0;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: -3px 7px 9px 0px rgb(213, 213, 213);
+  transform: translate(100%);
+  transition: transform 300ms ease-in-out;
+  right: 0;
+  &--open {
+    transform: translate(0);
+    .settings__button {
+      transform: rotate(45deg);
+    }
+  }
+  &__input, &__submit  {
+    width: 100%;
+    border:none;
+    border-radius: 3px;
+    margin-bottom: v.$gutter / 2;
+    padding: .5rem;
+  }
+  &__button {
+    position: absolute;
+    left: -50px;
+    border:none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: v.$color-alt;
+    font-size: 1.5em;
+  }
+  &__submit {
+    background-color: v.$color-alt;
+    color: white;
+    font-size: 1em;
+  }
+}
