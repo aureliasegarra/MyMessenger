@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Field from 'src/containers/Field';
 
 // == Import
 import './styles.scss';
 
 // == Composant
-const Settings = ({ open, onClickButton }) => {
+const Settings = ({ open, onClickButton, onSubmitForm }) => {
   const handleOnClick = () => {
     console.log('je veux mettre un click');
     onClickButton();
+  };
+
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    console.log('je veux soumettre les fields');
+    onSubmitForm();
   };
 
   const classnames = open ? 'settings settings--open' : 'settings';
@@ -16,15 +23,23 @@ const Settings = ({ open, onClickButton }) => {
   return (
     <div className={classnames}>
       <button
-        onClick={handleOnClick}
         type="button"
         className="settings__button"
+        onClick={handleOnClick}
       >
         +
       </button>
-      <form className="settings__form">
-        <input type="email" placeholder="votre email" className="settings__input" />
-        <input type="password" placeholder="votre mot de passe" className="settings__input" />
+      <form className="settings__form" onSubmitForm={handleOnSubmit}>
+        <Field
+          type="email"
+          label="Email"
+          name="email"
+        />
+        <Field
+          type="password"
+          label="Mot de passe"
+          name="password"
+        />
         <button type="submit" className="settings__submit">Envoyer</button>
       </form>
     </div>
@@ -34,6 +49,7 @@ const Settings = ({ open, onClickButton }) => {
 Settings.propTypes = {
   onClickButton: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
+  onSubmitForm: PropTypes.func.isRequired,
 };
 // == Export
 export default Settings;

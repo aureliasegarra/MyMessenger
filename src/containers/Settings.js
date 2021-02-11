@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Settings from 'src/components/Settings';
-import { toggleSettings } from 'src/actions';
+import { toggleSettings, login } from 'src/actions';
 
 const mapStateToProps = (state) => ({
   open: state.open,
@@ -8,9 +8,11 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   onClickButton: () => {
-    console.log('je clique sur le bouton');
     const action = toggleSettings();
     dispatch(action);
+  },
+  onSubmitForm: () => {
+    dispatch(login());
   },
 });
 

@@ -3,6 +3,7 @@ import {
   ADD_MESSAGE,
   TOGGLE_SETTINGS,
   CHANGE_INPUT_VALUE,
+  SAVE_PSEUDO,
 } from 'src/actions';
 
 import { getHighestId } from 'src/selectors';
@@ -70,6 +71,14 @@ const reducer = (state = initialState, action = {}) => {
         user: {
           ...state.user,
           [action.name]: action.value, // brakets to dynamize props
+        },
+      };
+    case SAVE_PSEUDO:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          pseudo: action.pseudo,
         },
       };
     default:
