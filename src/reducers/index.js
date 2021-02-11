@@ -1,4 +1,10 @@
-import { SET_INPUT_VALUE, ADD_MESSAGE, TOGGLE_SETTINGS } from 'src/actions';
+import {
+  SET_INPUT_VALUE,
+  ADD_MESSAGE,
+  TOGGLE_SETTINGS,
+  CHANGE_INPUT_VALUE,
+} from 'src/actions';
+
 import { getHighestId } from 'src/selectors';
 
 const initialState = {
@@ -21,6 +27,11 @@ const initialState = {
   ],
   newMessage: '',
   open: true,
+  user: {
+    email: 'toto@tata.com',
+    password: 'qsdfghjkk',
+    pseudo: 'Anonyme',
+  },
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -52,6 +63,14 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         open: !state.open,
+      };
+    case CHANGE_INPUT_VALUE:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          [action.name]: action.value, // brakets to dynamize props
+        },
       };
     default:
       return state;

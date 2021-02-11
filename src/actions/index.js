@@ -2,6 +2,7 @@
 export const SET_INPUT_VALUE = 'SET_INPUT_VALUE';
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const TOGGLE_SETTINGS = 'TOGGLE_SETTINGS';
+export const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
 
 // Action creator
 export const setInputValue = (value) => ({
@@ -15,4 +16,10 @@ export const addMessage = () => ({
 
 export const toggleSettings = () => ({
   type: TOGGLE_SETTINGS,
+});
+
+export const changeInputValue = (value, name) => ({
+  type: CHANGE_INPUT_VALUE,
+  value,
+  name,
 });

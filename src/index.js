@@ -11,7 +11,7 @@ import store from 'src/store';
 // 1. What to render => React root element
 const rootReactElement = (
   <Provider store={store}>
-    <h1 className="title">ChatApp</h1>
+    <h1 className="title">myMessenger</h1>
     <App />
   </Provider>
 );
