@@ -6,26 +6,8 @@ import {
   SAVE_PSEUDO,
 } from 'src/actions';
 
-import { getHighestId } from 'src/selectors';
-
 const initialState = {
-  messages: [
-    {
-      id: 11,
-      author: 'Super Chat',
-      content: 'Hey salut',
-    },
-    {
-      id: 22,
-      author: 'Super Miaou',
-      content: 'Comment tu vas ?',
-    },
-    {
-      id: 3,
-      author: 'Super Chat',
-      content: 'Super !',
-    },
-  ],
+  messages: [],
   newMessage: '',
   open: true,
   user: {
@@ -33,6 +15,7 @@ const initialState = {
     password: 'fructis',
     pseudo: 'Anonyme',
   },
+  isLogged: false,
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -43,16 +26,10 @@ const reducer = (state = initialState, action = {}) => {
         newMessage: action.value,
       };
     case ADD_MESSAGE: {
-      // new object to put in the array of messages
-      const message = {
-        id: getHighestId(state) + 1,
-        author: 'Vincent',
-        content: state.newMessage,
-      };
       // creation of a new reference of the array
       const messages = [
         ...state.messages,
-        message,
+        action.message,
       ];
       return {
         ...state,
@@ -80,6 +57,8 @@ const reducer = (state = initialState, action = {}) => {
           ...state.user,
           pseudo: action.pseudo,
         },
+        isLogged: true,
+        open: false,
       };
     default:
       return state;

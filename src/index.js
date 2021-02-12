@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 // == Import data
 
-import App from 'src/components/App';
+import App from 'src/containers/App';
 import store from 'src/store';
 
 // 1. What to render => React root element

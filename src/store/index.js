@@ -2,13 +2,13 @@
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import debug from 'src/middlewares/debug';
 import auth from 'src/middlewares/auth';
+import websocket from 'src/middlewares/websocket';
 
 import reducer from 'src/reducers';
 
 const store = createStore(reducer, composeWithDevTools(
-  applyMiddleware(debug, auth),
+  applyMiddleware(auth, websocket),
 ));
 
 export default store;

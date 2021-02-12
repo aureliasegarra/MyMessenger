@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Form from 'src/components/Form';
-import { setInputValue, addMessage } from 'src/actions';
+import { setInputValue, sendMessage } from 'src/actions';
 
 // state read branch
 const mapStateToProps = (state) => ({
@@ -15,7 +15,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
   onSubmitForm: () => {
     console.log('add a new message in the state');
-    const action = addMessage();
+    const action = sendMessage();
     dispatch(action);
   },
 });

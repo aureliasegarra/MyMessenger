@@ -6,6 +6,7 @@ export const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
 export const LOGIN = 'LOGIN';
 export const SAVE_PSEUDO = 'SAVE_PSEUDO';
 export const WS_CONNECT = 'WS_CONNECT';
+export const SEND_MESSAGE = 'SEND_MESSAGE';
 
 // Action creator
 export const setInputValue = (value) => ({
@@ -13,8 +14,9 @@ export const setInputValue = (value) => ({
   value,
 });
 
-export const addMessage = () => ({
+export const addMessage = (message) => ({
   type: ADD_MESSAGE,
+  message,
 });
 
 export const toggleSettings = () => ({
@@ -38,4 +40,8 @@ export const savePseudo = (pseudo) => ({
 
 export const wsConnect = () => ({
   type: WS_CONNECT,
+});
+
+export const sendMessage = () => ({
+  type: SEND_MESSAGE,
 });

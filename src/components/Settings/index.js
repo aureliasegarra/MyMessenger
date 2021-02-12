@@ -29,7 +29,7 @@ const Settings = ({ open, onClickButton, onSubmitForm }) => {
       >
         +
       </button>
-      <form className="settings__form" onSubmitForm={handleOnSubmit}>
+      <form className="settings__form" onSubmit={handleOnSubmit}>
         <Field
           type="email"
           label="Email"

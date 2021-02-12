@@ -21,7 +21,7 @@ const Message = ({ author, content, isMine }) => {
 Message.propTypes = {
   author: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
-  isMine: PropTypes.string.isRequired,
+  isMine: PropTypes.bool.isRequired,
 };
 
 // == Export
