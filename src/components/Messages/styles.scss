@@ -7,6 +7,9 @@
 }
 
 .message {
+  &--is-mine {
+    text-align: right;
+  }
   &__author {
     font-size: 0.8em;
     margin-bottom: v.$gutter;

@@ -5,6 +5,7 @@ export const TOGGLE_SETTINGS = 'TOGGLE_SETTINGS';
 export const CHANGE_INPUT_VALUE = 'CHANGE_INPUT_VALUE';
 export const LOGIN = 'LOGIN';
 export const SAVE_PSEUDO = 'SAVE_PSEUDO';
+export const WS_CONNECT = 'WS_CONNECT';
 
 // Action creator
 export const setInputValue = (value) => ({
@@ -33,4 +34,8 @@ export const login = () => ({
 export const savePseudo = (pseudo) => ({
   type: SAVE_PSEUDO,
   pseudo,
+});
+
+export const wsConnect = () => ({
+  type: WS_CONNECT,
 });

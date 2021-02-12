@@ -29,8 +29,8 @@ const initialState = {
   newMessage: '',
   open: true,
   user: {
-    email: 'toto@tata.com',
-    password: 'qsdfghjkk',
+    email: 'acidman@herocorp.io',
+    password: 'fructis',
     pseudo: 'Anonyme',
   },
 };
